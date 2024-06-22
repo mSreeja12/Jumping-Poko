@@ -1,0 +1,82 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    overflow: hidden;
+}
+.Cont{
+    background-image: url(Backgrounds\ for\ game.jpeg);
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    background-size: 100vw 100vh;
+}
+.poko{
+    background-image: url(character.png);
+    background-repeat: no-repeat;
+    width: 200px;
+    height: 200px;
+    z-index: 10;
+    bottom: 50%; 
+    
+    position:absolute;
+    background-size: cover;
+    bottom: 60px;
+}
+.obstracle{
+    background-image: url(squid.png);
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 200px;
+    height: 200px;
+    z-index: 10;
+    
+    bottom: 85px;
+}
+.obstracleAni{
+    animation: obstracleAni 5s linear infinite;
+}
+.animatePoko{
+    animation: poko 0.6s linear;
+
+}
+.gameOver{
+    visibility: hidden;
+    font-size: 100px;
+    color: red;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 20;
+}
+.scoreCon {
+    position: absolute; 
+    z-index: 15; 
+    font-size: 50px;
+}
+@keyframes poko{
+    0%{
+        bottom: 60px;
+    }
+    
+    50%{
+        bottom: 400px;
+     
+    }
+    
+    100%{
+        bottom: 0px;
+    }
+}
+
+@keyframes obstracleAni{
+    0%{
+        left: 100vw;
+    }
+    100%{
+        left: -10vw;
+    }
+}
